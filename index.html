@@ -909,43 +909,68 @@
         </div>
     </div>
     <!-- video section start -->
-    <div class="rts__section section__padding video has__shape">
-        <div class="section__shape">
-            <div class="shape__1">
-                <img src="assets/images/shape/video-dark.svg" alt="">
-            </div>
-        </div>
-        <div class="container">
+    <style>
+        /* Zera tudo */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .rts__section.video {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    
+        .container-fluid,
+        .row,
+        .col-12 {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    
+        .video__area {
+            width: 100%;
+            height: 100vh; /* ocupa altura total da tela */
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .video__area__image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .video__area__image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border: none;
+            outline: none;
+        }
+    </style>
+    
+    <div class="rts__section video has__shape">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="video__area position-relative wow fadeInUp">
-                        <div class="video__area__image jara-mask-2 jarallax">
-                            <img class="radius-10 jarallax-img" src="assets/images/video/video-bg.webp" alt="">
-                        </div>
-                        <div class="video--spinner__wrapper ">
-                            <div class="rts__circle">
-                                <svg class="spinner" viewBox="0 0 100 100">
-                                    <defs>
-                                        <path id="circle-2" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
-                                    </defs>
-                                    <text>
-                                        <textPath xlink:href="#circle-2">Watch Now * Watch Now * Watch Full Video *
-                                        </textPath>
-                                    </text>
-                                </svg>
-                                <div class="rts__circle--icon">
-                                    <a href="https://www.youtube.com/watch?v=qOwxqRGHy5Q" class="video-play">
-                                        <i class="flaticon-play"></i>
-
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="video__area">
+                        <div class="video__area__image">
+                            <video autoplay muted loop playsinline controls>
+                                <source src="Video/ANANDA - 15 ANOS_TRAILER.mp4" type="video/mp4">
+                                Seu navegador não suporta vídeos HTML5.
+                            </video>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- video section end -->
     <div class="modal similar__modal fade " id="loginModal">
         <div class="modal-dialog modal-dialog-centered">
